@@ -144,18 +144,7 @@ const RightSection = () => {
                                     <h2>{msg.role === 'user' ? 'You' : 'EPREZTO-GPT Bot'}</h2>
                                     {msg.role === 'model' ? (
                                     // eslint-disable-next-line 
-                                    <ReactMarkdown
-                                        children={msg.parts[0].text}
-                                        components={{
-                                            a: ({ href, children }) => (
-                                                <a href={href} target="_blank" rel="noopener noreferrer">
-                                                    {children}
-                                                </a>
-                                            )
-                                        }}
-                                        className={styles.markdown}
-                                    />
-
+                                    <ReactMarkdown children={msg.parts[0].text} components={{ a: ({ href, children }) => ( <a href={href} target="_blank" rel="noopener noreferrer"> {children} </a>)}}className={styles.markdown}/>
                                     ) : (
                                         <p>{msg.parts[0].text}</p>
                                     )}
