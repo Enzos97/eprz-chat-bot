@@ -1,18 +1,24 @@
 {
-  "ignoreDuringBuilds": true,
-  "extends": "next/core-web-vitals",
-  "rules": {
-    "react/no-children-prop": "off",
-    "react/react-in-jsx-scope": "off" // Desactiva esta regla si la necesitas
+  "env": {
+    "browser": true,
+    "es2021": true
   },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
+    "next/core-web-vitals"
+  ],
   "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
   "plugins": ["@typescript-eslint"],
-  "overrides": [
-    {
-      "files": ["*.ts", "*.tsx"],
-      "rules": {
-        // Puedes añadir más reglas específicas para TypeScript aquí
-      }
-    }
-  ]
+  "rules": {
+    "no-console": "off", // Deshabilita la regla no-console
+    "react/no-children-prop": "off" // Deshabilita la regla de children
+  }
 }
