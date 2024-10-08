@@ -1,3 +1,17 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": "next/core-web-vitals",
+  "rules": {
+    "react/no-children-prop": "off",
+    "react/react-in-jsx-scope": "off" // Desactiva esta regla si la necesitas
+  },
+  "parser": "@typescript-eslint/parser",
+  "plugins": ["@typescript-eslint"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx"],
+      "rules": {
+        // Puedes añadir más reglas específicas para TypeScript aquí
+      }
+    }
+  ]
 }

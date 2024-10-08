@@ -143,6 +143,7 @@ const RightSection = () => {
                                 <div className={styles.details}>
                                     <h2>{msg.role === 'user' ? 'You' : 'EPREZTO-GPT Bot'}</h2>
                                     {msg.role === 'model' ? (
+                                        // eslint-disable-next-line react/no-children-prop
                                         <ReactMarkdown
                                             components={{
                                                 a: ({ href, children }) => (
