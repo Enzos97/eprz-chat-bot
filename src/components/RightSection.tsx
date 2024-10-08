@@ -155,6 +155,7 @@ const RightSection = () => {
                                         >
                                             {msg.parts[0].text}
                                         </ReactMarkdown>
+
                                     ) : (
                                         <p>{msg.parts[0].text}</p>
                                     )}
