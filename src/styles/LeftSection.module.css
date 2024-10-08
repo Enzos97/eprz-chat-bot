@@ -1,43 +1,76 @@
 .leftSection {
-    background-color: var(--col1);
+    background-color: #483A9C;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
+
 .newChat {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0px 20px;
+    padding: 0 20px;
     height: 10%;
 }
 
-.text1{
+.text1 {
     color: var(--textcol);
-    font-size: 20px;
+    font-size: 18px; /* Ajusta el tamaño de la fuente */
+    font-weight: 500; /* Cambia el peso de la fuente para un estilo más ligero */
 }
 
-.newChat div{
+.newChat div {
     display: flex;
     align-items: center;
     gap: 10px;
 }
-.newChat div img{
+
+.newChat div img {
     border-radius: 50%;
 }
+
 .newChat svg {
     width: 30px;
     height: 30px;
     color: var(--textcol);
 }
 
-.allChats{
+.allChats {
     height: 70%;
-    overflow: auto;
+    overflow-y: auto;
     display: flex;
     flex-direction: column;
-    /* background-color: aqua; */
-    gap: 20px;
-    padding: 0px 20px;
+    gap: 15px; /* Aumenta el espacio entre los chats */
+    padding: 0 20px;
+    align-items: center; /* Centra horizontalmente los chats */
+}
+
+.chat {
+    width: 100%; /* Asegura que ocupe todo el ancho */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el texto */
+    align-items: center; /* Centra verticalmente */
+    padding: 10px 0; /* Espaciado vertical */
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo sutil para los chats */
+    border-radius: 8px; /* Bordes redondeados para los chats */
+}
+
+.chat p {
+    margin-left: 10px; /* Ajusta el margen según sea necesario */
+}
+
+
+.logoContainer {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    height: 100%;
+    flex-grow: 1; /* Para que ocupe el espacio disponible */
+}
+
+.logo {
+    max-width: 100%; /* Se ajusta al contenedor */
+    height: auto; /* Mantiene la proporción de la imagen */
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
 }

@@ -1,6 +1,7 @@
 import React from 'react'
 import chatgptlogo from '@/assets/chatgptlogo.png'
-import nouserlogo from '@/assets/nouserlogo.png'
+import epreztologo1 from '@/assets/eprezto-logo1.png'
+import OpenAILogoVersion1 from '@/assets/OpenAI-Logo-Version-1.png'
 import Image from 'next/image'
 import styles from '@/styles/LeftSection.module.css'
 
@@ -10,30 +11,22 @@ const LeftSection = () => {
     const allChats = [
         {
             id: 1,
-            chatName: 'This is sample Chat 1'
+            chatName: 'Consulta sobre el seguro para el vehículo con matrícula ABC123',
         },
         {
             id: 2,
-            chatName: 'This is sample Chat 2'
+            chatName: 'Información sobre el estado del pago para la matrícula XYZ456',
         },
         {
             id: 3,
-            chatName: 'This is sample Chat 3'
-        },
-        {
-            id: 4,
-            chatName: 'This is sample Chat 4'
-        },
-        {
-            id: 5,
-            chatName: 'This is sample Chat 5'
+            chatName: 'Emisión de la póliza para el cliente con el correo ejemplo@gmail.com',
         }
-    ]
+    ];
     return (
         <div className={styles.leftSection}>
             <div className={styles.newChat}>
                 <div>
-                    <Image src={chatgptlogo} alt="ChatGPT" width={50} height={50} />
+                    <Image src={epreztologo1} alt="ChatGPT" width={50} height={50} />
                     <p className={styles.text1}>CHATGPT BOT</p>
 
                 </div>
@@ -52,11 +45,9 @@ const LeftSection = () => {
                 ))}
             </div>
             <div className={styles.newChat}>
-                <div>
-                    <Image src={nouserlogo} alt="ChatGPT" width={50} height={50} />
-                    <p className={styles.text1}>virajj014@gmail.com</p>
+                <div className={styles.logoContainer}>
+                    <Image src={OpenAILogoVersion1} alt="OpenAI Logo" className={styles.logo} />
                 </div>
-
             </div>
 
         </div>
