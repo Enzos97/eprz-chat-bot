@@ -144,7 +144,6 @@ const RightSection = () => {
                                     <h2>{msg.role === 'user' ? 'You' : 'EPREZTO-GPT Bot'}</h2>
                                     {msg.role === 'model' ? (
                                         <ReactMarkdown
-                                            children={msg.parts[0].text}
                                             components={{
                                                 a: ({ href, children }) => (
                                                     <a href={href} target="_blank" rel="noopener noreferrer">
@@ -153,7 +152,9 @@ const RightSection = () => {
                                                 )
                                             }}
                                             className={styles.markdown}
-                                        />
+                                        >
+                                            {msg.parts[0].text}
+                                        </ReactMarkdown>
                                     ) : (
                                         <p>{msg.parts[0].text}</p>
                                     )}
